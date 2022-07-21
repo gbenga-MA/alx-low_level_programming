@@ -1,18 +1,16 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - a function that prins length of a sting
- * @s: input
- * Return: 0
+ * _print_rev_recursion - prints a string in reverse
+ * @s: string
+ * Return: pointer
  */
-int _strlen_recursion(char *s)
+
+void _print_rev_recursion(char *s)
 {
-if (*s == '\0')
-{
-return (0);
-}
-else
-{
-return (1 + _strlen_recursion(s + 1));
-}
+	if (*s != '\0')
+	{
+		_print_rev_recursion((s + 1));
+		_putchar(*(s + 0));
+	}
 }
